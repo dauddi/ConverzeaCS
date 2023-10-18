@@ -9,7 +9,7 @@ type Props = {
 const Layout = ({ children, title = "This is the default title" }: Props) => (
   <div className="relative min-h-screen flex flex-col justify-center items-center bg-hero bg-cover">
     <Head>
-      <title>{title} | Themeptation</title>
+      <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta
@@ -23,6 +23,18 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       />
       <meta property="og:url" content="https://slioth.themepttation.net/" />
       <meta property="og:type" content="website" />
+      <script
+        type="text/javascript"
+        dangerouslySetInnerHTML={{
+          __html: `
+                (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "jce25xirjx");
+              `,
+        }}
+      />
     </Head>
     {children}
   </div>
