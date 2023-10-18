@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swal-button {
+  border-radius: 12px;
+  background-color: #302d2d;
+  color: #fff;
+  font-size: 13px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.swal-modal .swal-button:hover {
+  background-color: #464141;
+}
+
+.swal-title {
+  font-weight: bold;
+}
